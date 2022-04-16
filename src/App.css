@@ -1,0 +1,8 @@
+header {
+    background-color: #f5f5f5;
+}
+
+.button-size {
+    color: #eb6877;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .44), 1px 1px 1px #4a0a11;
+}
