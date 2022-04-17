@@ -19,7 +19,7 @@ export const Description = () => {
     return (
         <>
             <DogImage url={dogUrl}/>
-            <button onClick={onClickShowDog} className={`button-size`}>on/off</button>
+            <button onClick={onClickShowDog} className={`button-size`}>switch</button>
         </>
     )
 }

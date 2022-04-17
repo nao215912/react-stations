@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import * as React from "react";
+import {BreedsSelect} from "~/BreedsSelect";
 
 export const DogListContainer = () => {
   const [breeds, setBreeds] =useState([])
@@ -17,9 +18,7 @@ export const DogListContainer = () => {
     },[])
 
     return (    <>
-       <ol>{breeds.map((breed) =>
-           <li>{breed}</li>
-       )}</ol>
+        <BreedsSelect breeds={breeds}/>
         </>
     )
 }
