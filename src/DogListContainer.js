@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import * as React from "react";
-import {BreedsSelect} from "~/BreedsSelect";
+import {BreedsSelect} from "./BreedsSelect";
 
 export const DogListContainer = () => {
   const [breeds, setBreeds] =useState([])
