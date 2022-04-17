@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {DogImage} from "~/DogImage";
+import {DogImage} from "./DogImage";
 import * as React from "react";
 
 export const Description = () => {
