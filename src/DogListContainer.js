@@ -6,6 +6,7 @@ export const DogListContainer = () => {
   const [breeds, setBreeds] =useState([])
     const [selectedBreed, setSelectedBreed] = useState("african")
     const [breedURLs, setBreedURLs] = useState([])
+    const [shouldShow, setShouldShow] = useState(false)
     useEffect(() => {
       fetch("https://dog.ceo/api/breeds/list/all")
           .then(res => res.json())
@@ -32,9 +33,9 @@ export const DogListContainer = () => {
             )
     }
     return (    <>
-        <BreedsSelect breeds={breeds} onChangeSelectedBreed={onChangeSelectedBreed} selectedBreed={selectedBreed}/>
+        <BreedsSelect breeds={breeds} onChangeSelectedBreed={onChangeSelectedBreed} selectedBreed={selectedBreed} shouldShow={shouldShow} setShouldShow={setShouldShow}/>
             <p>{selectedBreed}</p>
-            {breedURLs.map((breedURL) => <img src={breedURL} alt={`犬の画像`}/>)}
+            {shouldShow && breedURLs.map((breedURL) => <img src={breedURL} alt={`犬の画像`}/>)}
         </>
     )
 }
